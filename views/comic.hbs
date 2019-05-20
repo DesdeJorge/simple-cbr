@@ -1,0 +1,43 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>CBR Viewer | Made for Funny</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">CBR</a>
+    </nav>
+    <div class="container">
+        <br>
+        <input id="comic" type="hidden" value="{{comic}}">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item" id="prev"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item" id="next"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+        <div class="page-container">
+            {{#each files}}
+            <img src="{{this}}" data-path="{{this}}" class="img-responsive page">
+            {{/each}}
+        </div>
+        <br>
+        <br>
+    </div>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/jquery.zoom.js"></script>
+</body>
+
+</html>

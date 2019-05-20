@@ -1,0 +1,19 @@
+{
+  "name": "cbr-viewer",
+  "version": "1.0.0",
+  "description": "Comic book reader, made for fun",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Desde Jorge",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cbr": "^1.0.3",
+    "express": "^4.17.0",
+    "hbs": "^4.0.4",
+    "junk": "^3.1.0",
+    "multer": "^1.4.1"
+  }
+}

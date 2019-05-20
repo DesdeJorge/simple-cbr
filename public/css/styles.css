@@ -1,0 +1,13 @@
+.page-container{
+    text-align: center;
+}
+
+.page-container > img{
+    width: 500px;
+    height: 700px;
+}
+
+.btn-container{
+    margin-top: 20px;
+}
+  

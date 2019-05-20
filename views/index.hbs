@@ -1,0 +1,74 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>CBR Viewer | Made for Funny</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">CBR</a>
+    </nav>
+    <div class="container">
+        <br>
+        <h1>Simple Comic Book Reader</h1>
+        <h4>Made for fun | By <a target="_blank" href="https://twitter.com/DesdeJorge">Desde Jorge</a></h4>
+        <br>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#comicModal">Upload New Comic</button>
+        <br>
+        <br>
+        <table id="table" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col"></th>
+                </tr>
+
+            </thead>
+            <tbody>
+                {{#each comics}}
+                <tr>
+                    <td style="font-weight: bold; text-align:center;">{{this}}</td>
+                    <td style="font-size: 13px; text-align: center"><a href="/{{this}}"
+                            class="btn btn-primary">Read</button></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <div class="modal fade" id="comicModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Upload File</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="/upload" enctype="multipart/form-data" method="POST">
+                    <div class="modal-body">
+                        <input class="form-control" type="file" name="comic" id="comic" required />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+</body>
+
+</html>
